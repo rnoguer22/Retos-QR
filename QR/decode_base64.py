@@ -9,7 +9,7 @@ class Base64:
     def decode_hash(self):
         split_hash = ''
         correct_hash = ''
-        for i in range(len(self.encoded_hash)):
+        for _ in range(len(self.encoded_hash)):
             split_hash += self.encoded_hash[0]
             self.encoded_hash = self.encoded_hash[1:]
             try:
