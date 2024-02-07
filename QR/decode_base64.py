@@ -19,6 +19,15 @@ class Base64:
             except Exception as e:
                 pass
         return correct_hash
+
+
+    def write_hash(self, hash, file):
+        try:
+            with open(file, 'a') as hash_file:
+                hash_file.write(hash + '\n')
+            print(f"Se ha escrito el texto en el archivo '{file}'.")
+        except Exception as e:
+            print(f"Error al escribir en el archivo: {e}")
     
 
 
