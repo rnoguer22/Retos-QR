@@ -10,4 +10,4 @@ decoded_objects = decode(image)
 # Imprime la información decodificada
 for obj in decoded_objects:
     print("Tipo:", obj.type)
-    print("Datos:", obj.data.decode("utf-8"))
+    print("\nDatos:", obj.data.decode("utf-8"))
