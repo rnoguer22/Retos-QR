@@ -1,13 +1,12 @@
 from pyzbar.pyzbar import decode
 from PIL import Image
 
-# Carga la imagen que contiene el código QR
-image = Image.open("flag.png")
+class DecodeQR:
 
-# Decodifica el código QR
-decoded_objects = decode(image)
-
-# Imprime la información decodificada
-for obj in decoded_objects:
-    print("Tipo:", obj.type)
-    print("\nDatos:", obj.data.decode("utf-8"))
+    def decode_qr(self, image):
+        image = Image.open(image)
+        decoded_objects = decode(image)
+        for obj in decoded_objects:
+            print("Tipo:", obj.type)
+            print("\nDatos:", obj.data.decode("utf-8"))
+            return obj.data.decode("utf-8")
